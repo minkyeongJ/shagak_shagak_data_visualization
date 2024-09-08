@@ -1,18 +1,22 @@
 import { useRef, useEffect } from 'react';
 
-const Canvas = (props) => {
+const Canvas = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext('2d');
 
+    // 캔버스의 크기 설정
+    canvas.width = 500;
+    canvas.height = 300;
+
     // 파란색 배경의 직사각형 그리기
     context.fillStyle = '#0000FF';
-    context.fillRect(0, 0, context.canvas.width, context.canvas.height);
+    context.fillRect(0, 0, canvas.width, canvas.height);
   }, []);
 
-  return <canvas ref={canvasRef} {...props} />;
+  return <canvas ref={canvasRef} />;
 };
 
 export default Canvas;

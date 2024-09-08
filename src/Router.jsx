@@ -17,6 +17,10 @@ import PieChart from './pages/chartjs/PieChart';
 import PolarAreaChart from './pages/chartjs/PolarAreaChart';
 import RadarChart from './pages/chartjs/RadarChart';
 import ScatterChart from './pages/chartjs/ScatterChart';
+import FillRect from './pages/canvas/FillRect';
+import BeginPath from './pages/canvas/BeginPath';
+import Triangle from './pages/canvas/Triangle';
+import Sin from './pages/canvas/Sin';
 import Sunrise from './pages/canvas/Sunrise';
 
 const router = createBrowserRouter([
@@ -28,6 +32,22 @@ const router = createBrowserRouter([
         path: 'canvas',
         element: <Canvas />,
         children: [
+          {
+            path: 'FillRect',
+            element: <FillRect />,
+          },
+          {
+            path: 'BeginPath',
+            element: <BeginPath />,
+          },
+          {
+            path: 'Triangle',
+            element: <Triangle />,
+          },
+          {
+            path: 'Sin',
+            element: <Sin />,
+          },
           {
             path: 'sunrise',
             element: <Sunrise />,
