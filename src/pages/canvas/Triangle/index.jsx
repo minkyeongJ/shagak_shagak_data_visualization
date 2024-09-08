@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 
-const Canvas = () => {
+const Triangle = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -35,4 +35,4 @@ const Canvas = () => {
   return <canvas ref={canvasRef} />;
 };
 
-export default Canvas;
+export default Triangle;

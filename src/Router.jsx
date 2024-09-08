@@ -21,7 +21,7 @@ import FillRect from './pages/canvas/FillRect';
 import BeginPath from './pages/canvas/BeginPath';
 import Triangle from './pages/canvas/Triangle';
 import Sin from './pages/canvas/Sin';
-import Sunrise from './pages/canvas/Sunrise';
+import SunriseSunset from './pages/canvas/SunriseSunset';
 
 const router = createBrowserRouter([
   {
@@ -49,8 +49,8 @@ const router = createBrowserRouter([
             element: <Sin />,
           },
           {
-            path: 'sunrise',
-            element: <Sunrise />,
+            path: 'Sunrise_Sunset',
+            element: <SunriseSunset />,
           },
         ],
       },

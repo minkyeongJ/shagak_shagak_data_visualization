@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 
-const Canvas = () => {
+const Sin = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -54,4 +54,4 @@ const Canvas = () => {
   return <canvas ref={canvasRef} />;
 };
 
-export default Canvas;
+export default Sin;
