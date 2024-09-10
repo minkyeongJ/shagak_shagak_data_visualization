@@ -17,85 +17,155 @@ import PieChart from "./pages/chartjs/PieChart";
 import PolarAreaChart from "./pages/chartjs/PolarAreaChart";
 import RadarChart from "./pages/chartjs/RadarChart";
 import ScatterChart from "./pages/chartjs/ScatterChart";
+import Map01 from "./pages/map/01";
+import Map0101 from "./pages/map/01/01";
+import Map0102 from "./pages/map/01/02";
+import Map0103 from "./pages/map/01/03";
+import Map0201 from "./pages/map/02/01";
+import Map0202 from "./pages/map/02/02";
+import Map0203 from "./pages/map/02/03";
+import Map0301 from "./pages/map/03/01";
+import Map0302 from "./pages/map/03/02";
+import Map03 from "./pages/map/03";
+import Map02 from "./pages/map/02";
+import Map04 from "./pages/map/04";
+import FillRect from './pages/canvas/FillRect';
+import BeginPath from './pages/canvas/BeginPath';
+import Triangle from './pages/canvas/Triangle';
+import Sin from './pages/canvas/Sin';
+import SunriseSunset from './pages/canvas/SunriseSunset';
+
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
     children: [
       {
-        path: "canvas",
+        path: 'canvas',
         element: <Canvas />,
-        children: [{}],
+        children: [
+          {
+            path: 'FillRect',
+            element: <FillRect />,
+          },
+          {
+            path: 'BeginPath',
+            element: <BeginPath />,
+          },
+          {
+            path: 'Triangle',
+            element: <Triangle />,
+          },
+          {
+            path: 'Sin',
+            element: <Sin />,
+          },
+          {
+            path: 'Sunrise_Sunset',
+            element: <SunriseSunset />,
+          },
+        ],
       },
       {
-        path: "chartjs",
+        path: 'chartjs',
         element: <ChartJs />,
         children: [
           {
-            path: "areachart",
+            path: 'areachart',
             element: <AreaChart />,
           },
           {
-            path: "barchart",
+            path: 'barchart',
             element: <BarChart />,
           },
           {
-            path: "bubblechart",
+            path: 'bubblechart',
             element: <BubbleChart />,
           },
           {
-            path: "doughnutpiechart",
+            path: 'doughnutpiechart',
             element: <DoughnutPieChart />,
           },
           {
-            path: "linechart",
+            path: 'linechart',
             element: <LineChart />,
           },
           {
-            path: "mbti",
+            path: 'mbti',
             element: <MBTI />,
           },
           {
-            path: "mixedchart",
+            path: 'mixedchart',
             element: <MixedChart />,
           },
           {
-            path: "olympic",
+            path: 'olympic',
             element: <Olympic />,
           },
           {
-            path: "piechart",
+            path: 'piechart',
             element: <PieChart />,
           },
           {
-            path: "polarareachart",
+            path: 'polarareachart',
             element: <PolarAreaChart />,
           },
           {
-            path: "radarchart",
+            path: 'radarchart',
             element: <RadarChart />,
           },
           {
-            path: "scatterchart",
+            path: 'scatterchart',
             element: <ScatterChart />,
           },
         ],
       },
       {
-        path: "d3js",
+        path: 'd3js',
         element: <D3js />,
         children: [
           {
-            path: "ex1",
+            path: 'ex1',
             element: <Ex1 />,
           },
         ],
       },
       {
-        path: "map",
+        path: 'map',
         element: <Map />,
-        // children: [{}],
+        children: [
+          {
+            path: "01 Map",
+            element: <Map01 />,
+            children: [
+              { path: "MapContainer", element: <Map0101 /> },
+              { path: "TileLayer", element: <Map0102 /> },
+              { path: "Custom Hooks", element: <Map0103 /> },
+            ],
+          },
+          {
+            path: "02 marker",
+            element: <Map02 />,
+            children: [
+              { path: "Marker", element: <Map0201 /> },
+              { path: "Popup & Tooltip", element: <Map0202 /> },
+              { path: "Custom Marker", element: <Map0203 /> },
+            ],
+          },
+          {
+            path: "03 Vector",
+            element: <Map03 />,
+            children: [
+              { path: "Vector", element: <Map0301 /> },
+              { path: "2", element: <Map0302 /> },
+            ],
+          },
+          {
+            path: "map with CSV",
+            element: <Map04 />,
+          },
+        ],
       },
     ],
   },
